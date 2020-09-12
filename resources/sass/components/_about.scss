@@ -1,0 +1,57 @@
+.about {
+	width: 75%;
+	margin: 0 auto;
+	box-shadow: 0 1rem 2.5rem rgba($color-black, .6);
+	background-color: rgba($color-white, .75);
+	border-radius: 3px;
+	color: $color-text;
+	padding: 3.75rem;
+	padding-left: 5.625rem;
+	font-size: 1rem;
+	transform: skewX(-12deg);
+	
+	@include respond(tab-port) {
+		width: 100%;
+		padding: 3rem;
+	    padding-left: 4rem;
+	}
+	
+	@include respond(phone) {
+		transform: skewX(0);
+	}
+
+	
+	&__shape {
+		height: 9.5rem;
+		width: 9.5rem;
+		float: left;
+		-webkit-shape-outside: circle(50% at 50% 50%);
+		shape-outside: circle(50% at 50% 50%);
+		transform: translateX(-1.875rem) skewX(12deg);
+		overflow: hidden;
+		border-radius: 50%;
+		
+		@supports (clip-path: polygon(0, 0)) or (-webkit-clip-path: polygon(0, 0)) {
+			-webkit-clip-path: circle(50% at 50% 50%);
+		    clip-path: circle(50% at 50% 50%);
+		    border-radius: none;
+		}
+		
+		@include respond(phone) {
+			transform: translateX(-1.875rem) skewX(0);
+		}
+	}
+	
+	&__img {
+		height: 100%;
+		filter: grayscale(75%);
+	}
+	
+	&__text {
+		transform: skew(12deg);
+		
+		@include respond(phone) {
+			transform: skewX(0);
+		}
+	}
+}

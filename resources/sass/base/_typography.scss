@@ -1,0 +1,93 @@
+body {
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	color: $color-white;
+}
+
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+	margin-bottom: 3.75rem;
+	
+	@include respond(tab-port) {
+		text-align: center;
+	}
+	
+	
+	&--main {
+		display: block;
+		font-size: 3.75rem;
+		font-weight: 400;
+		letter-spacing: 1.56rem;
+		margin-left: -3px;
+		animation: moveInLeft 1s ease-out;
+		
+		@include respond(tab-port) {
+			letter-spacing: .625rem;
+			font-size: 3.125rem;
+		}
+	}
+	
+	&--sub-1 {
+		display: block;
+		font-size: 1.25rem;
+		font-weight: 400;
+		letter-spacing: 1.375rem;
+		margin-top: -1.25rem;
+		margin-bottom: .625rem;
+		animation: moveInRight 1s ease-out;
+		
+		@include respond(phone) {
+			letter-spacing: .68rem;
+			margin-bottom: 1.25rem; 
+			margin-top: -.625rem;
+		}
+	}
+	
+	&--sub-2 {
+		display: block;
+		font-weight: 300;
+		letter-spacing: .625rem;
+		animation: moveInBottom 1s ease-out;
+		
+		&__bold {
+			font-weight: 400;
+		}
+	}
+}
+
+.heading-secondary {
+	font-size: 2.2rem;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-image: linear-gradient(to right, rgba($color-secondary, 1), rgba($color-main, 1));
+	-webkit-background-clip: text;
+	color: transparent;
+	
+	@include respond(tab-port) {
+		text-align: center;
+	}
+	
+	@include respond(phone) {
+		font-size: 1.8rem;
+	}
+}
+
+.heading-tertiary {
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $color-text;
+}
+
+.paragraph {
+	font-size: 1rem;
+	color: $color-text;
+	
+	&:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+}

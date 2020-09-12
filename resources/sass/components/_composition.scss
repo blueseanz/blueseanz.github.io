@@ -1,0 +1,114 @@
+.composition {
+	position: relative;
+	
+	&__photo {
+		position: absolute;
+		width: 18%;
+		padding: 1rem;
+		box-shadow: 0 1rem 2.5rem rgba($color-black, .4);
+		border-radius: 2px;
+		z-index: 10;
+		transition: all .2s;
+		outline-offset: .7rem;
+		
+		@include respond(tab-land) {
+			width: 15%;
+		}
+		
+		// @include respond(tab-port) {
+		// 	float: left;
+		// 	position: relative;
+		// }
+		
+		&--p1 {
+			left: 0;
+			top: 8rem;
+			
+			@include respond(tab-port) {
+				left: 5%;
+				top: 0;
+			}
+		}
+		
+		&--p2 {
+			left: 12%;
+			top: 3rem;
+			
+			@include respond(tab-port) {
+				left: 25%;
+				top: 0;
+			}
+		}
+		
+		&--p3 {
+			left: 24%;
+			top: 8rem;
+			
+			@include respond(tab-port) {
+				left: 45%;
+				top: 0;
+			}
+		}
+		
+		&--p4 {
+			left: 36%;
+			top: 3rem;
+			
+			@include respond(tab-port) {
+				left: 65%;
+				top: 0;
+			}
+		}
+		
+		&--p5 {
+			left: 48%;
+			top: 8rem;
+			
+			@include respond(tab-port) {
+				left: 15%;
+				top: 3rem;
+			}
+		}
+		
+		&--p6 {
+			left: 60%;
+			top: 3rem;
+			
+			@include respond(tab-port) {
+				left: 35%;
+				top: 3rem;
+			}
+		}
+		
+		&--p7 {
+			left: 72%;
+			top: 8rem;
+			
+			@include respond(tab-port) {
+				left: 55%;
+				top: 3rem;
+			}
+		}
+		
+		&--p8 {
+			left: 84%;
+			top: 3rem;
+			
+			@include respond(tab-port) {
+				left: 75%;
+				top: 3rem;
+			}
+		}
+		
+		&:hover {
+			outline: 1px solid rgba($color-black, .7);
+			transform: scale(1.1) translateY(-3px);
+			box-shadow: 0 1rem 2.5rem rgba($color-black, .5);
+			z-index: 11;
+		}
+	}
+	
+	&:hover &__photo:not(:hover) {
+			transform: scale(.9);
+	}
+}
